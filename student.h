@@ -36,6 +36,8 @@ class Student {
         void setDays(int days[]);
         void setDegree(Degree degree);
 
+        void printHeader();
+
         void print();
 
 };
