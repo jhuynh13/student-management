@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
 
-enum degree {SECURITY, NETWORK, SOFTWARE};
-static const std::string degrees[] = {"SECURITY","NETWORK","NONFICTION"};
+enum Degree {SECURITY, NETWORK, SOFTWARE};
+static const std::string degrees[] = {"SECURITY","NETWORK","SOFTWARE"};
 
