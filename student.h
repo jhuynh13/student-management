@@ -14,10 +14,10 @@ class Student {
         string email;
         int age;
         int days[numberOfDays];
-        Degree degree;
+        DegreeProgram degree;
     public:
         Student();
-        Student(string studentID, string firstName, string lastName, string email, int age, int days[], Degree degree);
+        Student(string studentID, string firstName, string lastName, string email, int age, int days[], DegreeProgram degree);
         ~Student();
 
         string getID();
@@ -26,7 +26,7 @@ class Student {
         string getEmail();
         int getAge();
         int* getDays();
-        Degree getDegree();
+        DegreeProgram getDegree();
 
         void setID(string studentID);
         void setFirstName(string firstName);
@@ -34,7 +34,7 @@ class Student {
         void setEmail(string email);
         void setAge (int age);
         void setDays(int days[]);
-        void setDegree(Degree degree);
+        void setDegree(DegreeProgram degree);
 
         void printHeader();
 

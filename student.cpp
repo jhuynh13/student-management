@@ -1,6 +1,6 @@
 #include "Student.h"
 
-Student::Student(string studentID,string firstName,string lastName,string email,int age, int days[],Degree degree){
+Student::Student(string studentID,string firstName,string lastName,string email,int age, int days[],DegreeProgram degree){
 
     this->studentID = studentID;
     this->firstName = firstName;
@@ -59,7 +59,7 @@ void Student::setDays(int days[]){
     this->days[1] = days[1];
     this->days[2] = days[2];
 }
-void Student::setDegree(Degree degree){
+void Student::setDegree(DegreeProgram degree){
     this->degree = degree;
 }
 
