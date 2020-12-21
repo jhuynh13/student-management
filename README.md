@@ -1,0 +1,1 @@
+This project migrates an existing student system to a new platform using C++ language. Since the application already exists, its requirements exist as well. It implements the part of the system based on these requirements. A list of data is provided as part of these requirements. This part of the system is responsible for reading and manipulating the provided data.
