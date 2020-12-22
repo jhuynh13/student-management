@@ -34,7 +34,7 @@ int Student::getAge(){
 int* Student::getDays(){
     return this->days;
 }
-Degree Student::getDegree(){
+DegreeProgram Student::getDegree(){
     return this->degree;
 }
 
