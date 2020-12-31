@@ -1,15 +1,15 @@
 #include "Student.h"
 
-Student::Student(string studentID,string firstName,string lastName,string email,int age, int days[],DegreeProgram degree){
+Student::Student(string studentID,string firstName,string lastName,string emailAddress,int age, int daysInCourse[],DegreeProgram degree){
 
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
-    this->email = email;
+    this->emailAddress = emailAddress;
     this->age = age;
-    this->days[0] = days[0];
-    this->days[1] = days[1];
-    this->days[2] = days[2];
+    this->daysInCourse[0] = daysInCourse[0];
+    this->daysInCourse[1] = daysInCourse[1];
+    this->daysInCourse[2] = daysInCourse[2];
     this->degree = degree;
 
 }
@@ -26,13 +26,13 @@ string Student::getLastName(){
     return this->lastName;
 }
 string Student::getEmail(){
-    return this->email;
+    return this->emailAddress;
 }
 int Student::getAge(){
     return this->age;
 }
 int* Student::getDays(){
-    return this->days;
+    return this->daysInCourse;
 }
 DegreeProgram Student::getDegree(){
     return this->degree;
@@ -49,15 +49,15 @@ void Student::setLastName(string lastName){
     this->lastName = lastName;
 }
 void Student::setEmail (string email){
-    this->email = email;
+    this->emailAddress = emailAddress;
 }
 void Student::setAge (int age){
     this->age = age;
 }
 void Student::setDays(int days[]){
-    this->days[0] = days[0];
-    this->days[1] = days[1];
-    this->days[2] = days[2];
+    this->daysInCourse[0] = daysInCourse[0];
+    this->daysInCourse[1] = daysInCourse[1];
+    this->daysInCourse[2] = daysInCourse[2];
 }
 void Student::setDegree(DegreeProgram degree){
     this->degree = degree;
