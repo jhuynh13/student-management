@@ -1,4 +1,5 @@
 #pragma once
+#include <iomanip>
 #include <iostream>
 #include "Degree.h"
 using std::string;
@@ -11,13 +12,13 @@ class Student {
         string studentID;
         string firstName;
         string lastName;
-        string email;
+        string emailAddress;
         int age;
-        int days[numberOfDays];
-        Degree degree;
+        int daysInCourse[numberOfDays];
+        DegreeProgram degree;
     public:
         Student();
-        Student(string studentID, string firstName, string lastName, string email, int age, int days[], Degree degree);
+        Student(string studentID, string firstName, string lastName, string email, int age, int daysInCourse[], DegreeProgram degree);
         ~Student();
 
         string getID();
@@ -26,15 +27,15 @@ class Student {
         string getEmail();
         int getAge();
         int* getDays();
-        Degree getDegree();
+        DegreeProgram getDegree();
 
         void setID(string studentID);
         void setFirstName(string firstName);
         void setLastName(string lastName);
-        void setEmail(string email);
+        void setEmail(string emailAddress);
         void setAge (int age);
-        void setDays(int days[]);
-        void setDegree(Degree degree);
+        void setDays(int daysInCourse[]);
+        void setDegree(DegreeProgram degree);
 
         void printHeader();
 
