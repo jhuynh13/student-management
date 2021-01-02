@@ -1,5 +1,5 @@
-
-#include "Student.h"
+#pragma once
+#include "student.h"
 class Roster{
     private:
         int last = -1;

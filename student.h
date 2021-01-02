@@ -1,7 +1,7 @@
-
+#pragma once
 #include <iomanip>
 #include <iostream>
-#include "Degree.h"
+#include "degree.h"
 using std::string;
 using std::cout;
 

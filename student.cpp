@@ -1,11 +1,11 @@
-#include "Student.h"
+#include "student.h"
 
-Student::Student(string studentID,string firstName,string lastName,string emailAddress,int age, int daysInCourse[],DegreeProgram degree){
+Student::Student(string studentID,string firstName,string lastName,string emailAddress1,int age, int daysInCourse[],DegreeProgram degree){
 
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
-    this->emailAddress = emailAddress;
+    this->emailAddress = emailAddress1;
     this->age = age;
     this->daysInCourse[0] = daysInCourse[0];
     this->daysInCourse[1] = daysInCourse[1];
@@ -39,8 +39,8 @@ DegreeProgram Student::getDegree(){
 }
 
 
-void setID(string studentID){
-
+void Student::setID(string studentID){
+    this->studentID = studentID;
 }
 void Student::setFirstName(string firstName){
     this->firstName = firstName;
@@ -48,7 +48,7 @@ void Student::setFirstName(string firstName){
 void Student::setLastName(string lastName){
     this->lastName = lastName;
 }
-void Student::setEmail (string email){
+void Student::setEmail (string emailAddress){
     this->emailAddress = emailAddress;
 }
 void Student::setAge (int age){

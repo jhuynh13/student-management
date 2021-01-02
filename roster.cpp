@@ -1,4 +1,4 @@
-#include "Roster.h"
+#include "roster.h"
 
 void Roster::add(string studentID, string firstName, string lastName, 
 string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degree){
@@ -33,14 +33,7 @@ void Roster::remove(string studentID){
 }
 
 void Roster::parse(string studentData){
-    DegreeProgram degree = SOFTWARE;
-    if (studentData.at(0) == 'S' && studentData.at(1) == 'E'){
-        degree = SECURITY;
-    }
-    else if (studentData.at(0) == 'N'){
-        degree = NETWORK;
-    }
-
+    
     int point = studentData.find(",");
     
     string studentID = studentData.substr(0, point);
@@ -70,6 +63,18 @@ void Roster::parse(string studentData){
     curr = point + 1;
     point = studentData.find(",", curr);
     int daysInCourse3 = stoi(studentData.substr(curr, point - curr));
+
+    curr = point + 1;
+    point = studentData.find(",", curr);
+    string program = studentData.substr(curr, point - curr);
+
+    DegreeProgram degree = SOFTWARE;
+    if (program.at(0) == 'S' && program.at(1) == 'E'){
+        degree = SECURITY;
+    }
+    else if (program.at(0) == 'N'){
+        degree = NETWORK;
+    }
 
     add(studentID,firstName,lastName,emailAddress,age,daysInCourse1,daysInCourse2,daysInCourse3,degree);
 
@@ -132,10 +137,10 @@ void Roster::printInvalidEmails(){
     for(int x = 0; x <= Roster::last; x++){
         string email = classRosterArray[x]->getEmail();
         
-        if(email.find(' ') == string::npos && email.find('.') > 0 && email.find('@') > 0){
+        if(email.find('.') == string::npos || email.find('@') == string::npos || !(email.find(' ') == string::npos)){
             check = true;
             cout << classRosterArray[x]->getFirstName() << " " << classRosterArray[x]->getLastName() 
-            <<  "has invalid email of " << email << std::endl;
+            <<  " has invalid email of " << email << std::endl;
         }
     }
     if (!check){
