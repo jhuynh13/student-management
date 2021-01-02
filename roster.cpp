@@ -37,7 +37,7 @@ void Roster::parse(string studentData){
     if (studentData.at(0) == 'S' && studentData.at(1) == 'E'){
         degree = SECURITY;
     }
-    else if (studentData.at(0) = 'N'){
+    else if (studentData.at(0) == 'N'){
         degree = NETWORK;
     }
 

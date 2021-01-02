@@ -1,4 +1,4 @@
-#pragma once
+
 #include <iomanip>
 #include <iostream>
 #include "Degree.h"
