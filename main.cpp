@@ -57,7 +57,7 @@ int main(){
 
     //Call printByDegreeProgram showing students for each degree
     for(int z = 0; z < 3; z++){
-        cout << "Students by degree type:" << degrees[z] << endl;
+        cout << "Degree Program: " << degrees[z] << endl;
         classRoster.printByDegreeProgram((DegreeProgram)z);
     }
 
@@ -76,9 +76,6 @@ int main(){
     classRoster.remove("A3");
     cout << std::endl;
 
-    //Wait for user input to end
-    //getchar();
-    system("pause");
     return 0;
 
 }

@@ -1,10 +1,10 @@
-#pragma once
 #include <iomanip>
 #include <iostream>
 #include "degree.h"
 using std::string;
 using std::cout;
 
+//Skeleton for student class with attributes and methods
 class Student {
     public:
         const static int numberOfDays = 3;
@@ -36,8 +36,6 @@ class Student {
         void setAge (int age);
         void setDays(int daysInCourse[]);
         void setDegree(DegreeProgram degree);
-
-        void printHeader();
 
         void print();
 

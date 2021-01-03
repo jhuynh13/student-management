@@ -1,5 +1,6 @@
 #include "student.h"
 
+//Student constructor with parameter values
 Student::Student(string studentID,string firstName,string lastName,string emailAddress1,int age, int daysInCourse[],DegreeProgram degree){
 
     this->studentID = studentID;
@@ -63,10 +64,7 @@ void Student::setDegree(DegreeProgram degree){
     this->degree = degree;
 }
 
-void Student::printHeader(){
-    cout << "Output format: Student ID|First Name|Last name|Email|Age|Days|Degree\n";
-}
-
+//Print out every attribute for this student object
 void Student::print(){
     cout << this->getID() << '\t';
     cout << this->getFirstName() << '\t';
