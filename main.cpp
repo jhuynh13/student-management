@@ -1,4 +1,4 @@
-#include "Roster.h"
+#include "roster.h"
 
 using namespace std;
 
@@ -41,19 +41,24 @@ int main(){
     classRoster.printAll();
     cout << std::endl;
     
-    //Invalid emails
+    //Call printInvalidEmails to print out any invalid emails or error
+    //message saying none were found
     cout << "Students with invalid Emails:" << std::endl;
     classRoster.printInvalidEmails();
     cout << std::endl;
 
-    //Average days in course
+    //Call printAverageDaysInCourse to print the average days for each student
     cout << "Average Days in courses for each student:" << std::endl;
-    //roster.printAverageDaysInCourse();
+    for(int x=0; x<numStudents; x++){
+        int point = studentData[x].find(",");
+        string studentID = studentData[x].substr(0, point);
+        classRoster.printAverageDaysInCourse(studentID);
+    }
 
-    //degree program
-    for(int i = 0; i < 3; i++){
-        cout << "Students by degree type:" << degrees[i] << endl;
-        classRoster.printByDegreeProgram((DegreeProgram)i);
+    //Call printByDegreeProgram showing students for each degree
+    for(int z = 0; z < 3; z++){
+        cout << "Degree Program: " << degrees[z] << endl;
+        classRoster.printByDegreeProgram((DegreeProgram)z);
     }
 
     //Remove student with id A3
@@ -61,7 +66,7 @@ int main(){
     classRoster.remove("A3");
     cout << std::endl;
 
-    //show updated roster
+    //Show updated roster after deletion
     cout << "Displaying updated student roster:" << endl;
     classRoster.printAll();
     cout << std::endl;
@@ -71,7 +76,6 @@ int main(){
     classRoster.remove("A3");
     cout << std::endl;
 
-    system("pause");
     return 0;
 
 }

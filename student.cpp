@@ -1,11 +1,12 @@
-#include "Student.h"
+#include "student.h"
 
-Student::Student(string studentID,string firstName,string lastName,string emailAddress,int age, int daysInCourse[],DegreeProgram degree){
+//Student constructor with parameter values
+Student::Student(string studentID,string firstName,string lastName,string emailAddress1,int age, int daysInCourse[],DegreeProgram degree){
 
     this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
-    this->emailAddress = emailAddress;
+    this->emailAddress = emailAddress1;
     this->age = age;
     this->daysInCourse[0] = daysInCourse[0];
     this->daysInCourse[1] = daysInCourse[1];
@@ -39,8 +40,8 @@ DegreeProgram Student::getDegree(){
 }
 
 
-void setID(string studentID){
-
+void Student::setID(string studentID){
+    this->studentID = studentID;
 }
 void Student::setFirstName(string firstName){
     this->firstName = firstName;
@@ -48,7 +49,7 @@ void Student::setFirstName(string firstName){
 void Student::setLastName(string lastName){
     this->lastName = lastName;
 }
-void Student::setEmail (string email){
+void Student::setEmail (string emailAddress){
     this->emailAddress = emailAddress;
 }
 void Student::setAge (int age){
@@ -63,10 +64,7 @@ void Student::setDegree(DegreeProgram degree){
     this->degree = degree;
 }
 
-void Student::printHeader(){
-    cout << "Output format: Student ID|First Name|Last name|Email|Age|Days|Degree\n";
-}
-
+//Print out every attribute for this student object
 void Student::print(){
     cout << this->getID() << '\t';
     cout << this->getFirstName() << '\t';
